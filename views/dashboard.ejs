@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Dashboard</title></head>
+<body>
+<h2>Le tue carte</h2>
+<a href="/add">Aggiungi una nuova carta</a> | <a href="/logout">Logout</a>
+<ul>
+    <% cards.forEach(card => { %>
+        <li>
+            <strong><%= card.name %></strong> | Tipo: <%= card.type %> | Rarità: <%= card.rarity %><br>
+            <img src="/uploads/<%= card.image %>" width="150">
+        </li>
+    <% }); %>
+</ul>
+</body>
+</html>
