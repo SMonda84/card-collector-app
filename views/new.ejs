@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nuova Carta</title>
+</head>
+<body>
+  <h1>Aggiungi una nuova carta</h1>
+  <form method="POST" action="/cards" enctype="multipart/form-data">
+    <input type="text" name="name" placeholder="Nome carta" required><br>
+    <input type="file" name="image"><br>
+    <button type="submit">Aggiungi</button>
+  </form>
+  <a href="/cards">Torna alla lista</a>
+</body>
+</html>

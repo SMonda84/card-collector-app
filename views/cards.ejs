@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Le mie Carte</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Le mie Carte</h1>
+  <a href="/cards/new">Aggiungi nuova carta</a> |
+  <a href="/logout">Logout</a>
+  <div class="cards">
+    <% cards.forEach(card => { %>
+      <div class="card">
+        <h3><%= card.name %></h3>
+        <% if (card.image) { %>
+          <img src="<%= card.image %>" width="150">
+        <% } %>
+      </div>
+    <% }); %>
+  </div>
+</body>
+</html>
